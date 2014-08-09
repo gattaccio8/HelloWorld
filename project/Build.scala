@@ -2,14 +2,14 @@ import sbt._
 import Keys._
 
 object HelloWorldInAmazon extends Build {
-  import scala.collection._
   import Dependency._
   import Resolvers._
   import BuildSettings._
+  import scala.collection._
 
   lazy val root = Project(id = "HelloWorldInAmazon", base = file("."), settings = standardBuildSettings ++ Seq(
-  resolvers := Seq(jettyRepo, resolver, Classpaths.typesafeResolver),
-  libraryDependencies ++= jetty ++ scalaTest
+    resolvers := Seq(jettyRepo, resolver, Classpaths.typesafeResolver),
+    libraryDependencies ++= jetty ++ scalaTest
   ))
 }
 
@@ -28,15 +28,14 @@ object Resolvers {
 
 
 object Dependency {
-
-  val jettyVersion = "7.5.4.v20111024"
-//  val seleniumVersion = "2.6.0"
-//  val scalaTestVersion = "2.1.0"
+  private val jettyVersion = "8.1.7.v20120910"
+  private val scalaTestVersion = "2.2.1"
+  //  val seleniumVersion = "2.6.0"
 
   val jetty = Seq (
-      "org.eclipse.jetty" % "jetty-server" % "9.2.2.v20140723",
-      "org.eclipse.jetty" % "jetty-webapp" % "9.2.2.v20140723"
+      "org.eclipse.jetty" % "jetty-server" % jettyVersion,
+      "org.eclipse.jetty" % "jetty-webapp" % jettyVersion
     )
 
-  val scalaTest = Seq("org.scalatest" % "scalatest_2.10" % "2.0" % "test")
+  val scalaTest = Seq("org.scalatest" % "scalatest_2.11" % scalaTestVersion  % "test")
 }
