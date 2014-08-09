@@ -15,7 +15,7 @@ object HelloWorldInAmazon extends Build {
 
 object BuildSettings {
   val standardBuildSettings: Seq[sbt.Project.Setting[_]] = Defaults.defaultSettings ++ Seq[Setting[_]](
-      organization := "HelloWorldInAmazon",     //TODO these 3 lines are ignored here and picked from build.sbt instead
+      organization := "HelloWorldEmbededJetty",     //TODO these 3 lines are ignored here and picked from build.sbt instead
       version := "1.0",
       scalaVersion := "2.10.4"
   )
