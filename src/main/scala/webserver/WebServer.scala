@@ -1,0 +1,6 @@
+package webserver
+
+
+object WebServer {
+
+}
