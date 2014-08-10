@@ -7,7 +7,7 @@ object HelloWorldInAmazon extends Build {
   import BuildSettings._
   import scala.collection._
 
-  lazy val root = Project(id = "HelloWorldInAmazon", base = file("."), settings = standardBuildSettings ++ Seq(
+  lazy val root = Project(id = "HelloWorldEmbededJetty", base = file("."), settings = standardBuildSettings ++ Seq(
     resolvers := Seq(jettyRepo, resolver, Classpaths.typesafeResolver),
     libraryDependencies ++= jetty ++ scalaTest
   ))

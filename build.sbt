@@ -1,4 +1,4 @@
-name := "HelloWorldInAmazon"
+name := "HelloWorldEmbededJetty"
 
 version := "1.0"
 
