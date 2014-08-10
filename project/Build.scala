@@ -1,7 +1,7 @@
 import sbt._
 import Keys._
 
-object HelloWorldInAmazon extends Build {
+object HelloWorldEmbedJetty extends Build {
   import Dependency._
   import Resolvers._
   import BuildSettings._
