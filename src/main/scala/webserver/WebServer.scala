@@ -45,7 +45,7 @@ object WebServer extends App {
     if(new File("src/main/webapp").exists())
       context.setWar("src/main/webapp")
     else
-      context.setWar(getClass.getClassLoader.getResource("src/main/webapp").toExternalForm)
+      context.setWar(getClass.getClassLoader.getResource("webapp").toExternalForm)
     context
   }
 
